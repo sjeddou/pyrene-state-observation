@@ -33,34 +33,10 @@ INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/include)
 
 ADD_LIBRARY(${LIBRARY_NAME}
   SHARED
-  kalman-filter-base.cpp
-  observer-base.cpp
-  extended-kalman-filter.cpp
-  linear-kalman-filter.cpp
-  zero-delay-observer.cpp
-  sensor-base.cpp
-  algebraic-sensor.cpp
-  rotation-velocity.cpp
-  linear-acceleration.cpp
-  magnetic-field.cpp
-  definitions.cpp
-  accelerometer-gyrometer.cpp
-  accelerometer-gyrometer-magnetometer.cpp
-  probability-law-simulation.cpp
   gaussian-white-noise.cpp
-  dynamical-system-functor-base.cpp
-  dynamical-system-simulator.cpp
-  imu-dynamical-system.cpp
-  imu-magnetometer-dynamical-system.cpp
-  flexibility-estimator-base.cpp
-  ekf-flexibility-estimator-base.cpp
-  fixed-contact-ekf-flex-estimator-imu.cpp
-  model-base-ekf-flex-estimator-imu.cpp
-  imu-fixed-contact-dynamical-system.cpp
-  stable-imu-fixed-contact-dynamical-system.cpp
-  imu-elastic-local-frame-dynamical-system.cpp
-  bidim-elastic-inv-pendulum-dyn-sys.cpp
   multibody-flexible-dynamical-system.cpp
+  dynamical-system-functor-base.cpp
+
   ${${PROJECT_NAME}_ABSOLUTE_HEADERS}
   )
 

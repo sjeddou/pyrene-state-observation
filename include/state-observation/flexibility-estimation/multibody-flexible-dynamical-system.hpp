@@ -1,5 +1,5 @@
 #ifndef MULTIBODYFLEXIBLEDYNAMICALSYSTEM_HPP_
-#define MULTIBODYFLEXIBLEDYNAMICALSYSTEM_HPP
+#define MULTIBODYFLEXIBLEDYNAMICALSYSTEM_HPP_
 #include<iostream>
 
 
@@ -9,10 +9,16 @@
       //Constructor
       MultibodyFlexibleDynamicalSystem();
       //Destructor
-      ~MultibodyFlexibleDynamicalSystem();
+      virtual ~MultibodyFlexibleDynamicalSystem();
+      virtual void Start();
+
+
+    private:
+
+    protected:
 
   };
 
 
 
-#endif 
+#endif // MULTIBODYFLEXIBLEDYNAMICALSYSTEM_HPP_

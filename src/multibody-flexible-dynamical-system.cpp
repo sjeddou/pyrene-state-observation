@@ -6,14 +6,12 @@ using namespace std;
 
    MultibodyFlexibleDynamicalSystem::MultibodyFlexibleDynamicalSystem()
    {
-	cout<<"MultibodyFlexibleDynamicalSystem Constructor"<<endl;
    }
    MultibodyFlexibleDynamicalSystem::~MultibodyFlexibleDynamicalSystem()
    {
-	cout<<"MultibodyFlexibleDynamicalSystem Destructor"<<endl;
+   }
+   void MultibodyFlexibleDynamicalSystem::Start()
+   {
+   cout <<"Starting" <<endl;
    }
 
-int main(){
-cout<< "test" <<endl;
-return 0;
-}

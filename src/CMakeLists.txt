@@ -33,8 +33,11 @@ INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/include)
 
 ADD_LIBRARY(${LIBRARY_NAME}
   SHARED
-  
+  gaussian-white-noise.cpp
   multibody-flexible-dynamical-system.cpp
+  dynamical-system-functor-base.cpp
+  dynamical-system-simulator.cpp
+
   ${${PROJECT_NAME}_ABSOLUTE_HEADERS}
   )
 

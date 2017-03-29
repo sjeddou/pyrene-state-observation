@@ -1,0 +1,17 @@
+#include <iostream>
+#include "../include/state-observation/flexibility-estimation/multibody-flexible-dynamical-system.hpp"
+
+
+using namespace std;
+
+   MultibodyFlexibleDynamicalSystem::MultibodyFlexibleDynamicalSystem()
+   {
+   }
+   MultibodyFlexibleDynamicalSystem::~MultibodyFlexibleDynamicalSystem()
+   {
+   }
+   int main()
+   {
+   cout<< "Je fais un test" <<endl;
+   return 0;
+   }
