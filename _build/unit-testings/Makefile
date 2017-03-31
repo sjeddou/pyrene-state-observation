@@ -155,6 +155,44 @@ depend:
 	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system.dir/rule:
+	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f CMakeFiles/Makefile2 unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system.dir/rule
+.PHONY : unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system.dir/rule
+
+# Convenience name for target.
+test-multibody-flexible-dynamical-system: unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system.dir/rule
+.PHONY : test-multibody-flexible-dynamical-system
+
+# fast build rule for target.
+test-multibody-flexible-dynamical-system/fast:
+	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system.dir/build.make unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system.dir/build
+.PHONY : test-multibody-flexible-dynamical-system/fast
+
+test-multibody-flexible-dynamical-system.o: test-multibody-flexible-dynamical-system.cpp.o
+.PHONY : test-multibody-flexible-dynamical-system.o
+
+# target to build an object file
+test-multibody-flexible-dynamical-system.cpp.o:
+	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system.dir/build.make unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system.dir/test-multibody-flexible-dynamical-system.cpp.o
+.PHONY : test-multibody-flexible-dynamical-system.cpp.o
+
+test-multibody-flexible-dynamical-system.i: test-multibody-flexible-dynamical-system.cpp.i
+.PHONY : test-multibody-flexible-dynamical-system.i
+
+# target to preprocess a source file
+test-multibody-flexible-dynamical-system.cpp.i:
+	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system.dir/build.make unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system.dir/test-multibody-flexible-dynamical-system.cpp.i
+.PHONY : test-multibody-flexible-dynamical-system.cpp.i
+
+test-multibody-flexible-dynamical-system.s: test-multibody-flexible-dynamical-system.cpp.s
+.PHONY : test-multibody-flexible-dynamical-system.s
+
+# target to generate assembly for a file
+test-multibody-flexible-dynamical-system.cpp.s:
+	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system.dir/build.make unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system.dir/test-multibody-flexible-dynamical-system.cpp.s
+.PHONY : test-multibody-flexible-dynamical-system.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -168,6 +206,10 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... test-multibody-flexible-dynamical-system"
+	@echo "... test-multibody-flexible-dynamical-system.o"
+	@echo "... test-multibody-flexible-dynamical-system.i"
+	@echo "... test-multibody-flexible-dynamical-system.s"
 .PHONY : help
 
 

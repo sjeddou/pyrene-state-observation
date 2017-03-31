@@ -33,13 +33,7 @@ ADD_REQUIRED_DEPENDENCY("state-observation")
 
 SET(${PROJECT_NAME}_HEADERS
  
-  include/state-observation/flexibility-estimation/multibody-flexible-dynamical-system.hpp
-  include/state-observation/noise/gaussian-white-noise.hpp
-  include/state-observation/noise/noise-base.hpp
-  include/state-observation/tools/definitions.hpp
-  include/state-observation/tools/definitions.hxx
-  include/state-observation/tools/probability-law-simulation.hpp
-  include/state-observation/dynamical-system/dynamical-system-functor-base.hpp
+  include/pyrene-state-observation/flexibility-estimation/multibody-flexible-dynamical-system.hpp
 
 )
 SET(CXX_DISABLE_WERROR TRUE)

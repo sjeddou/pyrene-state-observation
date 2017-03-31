@@ -11,4 +11,5 @@
 /home/sjeddou/devel/pyrene-state-observation/_build/CMakeFiles/doc.dir
 /home/sjeddou/devel/pyrene-state-observation/_build/src/CMakeFiles/pyrene-state-observation.dir
 /home/sjeddou/devel/pyrene-state-observation/_build/CMakeFiles/release.dir
+/home/sjeddou/devel/pyrene-state-observation/_build/unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system.dir
 /home/sjeddou/devel/pyrene-state-observation/_build/CMakeFiles/uninstall.dir

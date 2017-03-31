@@ -337,6 +337,19 @@ pyrene-state-observation/fast:
 	$(MAKE) -f src/CMakeFiles/pyrene-state-observation.dir/build.make src/CMakeFiles/pyrene-state-observation.dir/build
 .PHONY : pyrene-state-observation/fast
 
+#=============================================================================
+# Target rules for targets named test-multibody-flexible-dynamical-system
+
+# Build rule for target.
+test-multibody-flexible-dynamical-system: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test-multibody-flexible-dynamical-system
+.PHONY : test-multibody-flexible-dynamical-system
+
+# fast build rule for target.
+test-multibody-flexible-dynamical-system/fast:
+	$(MAKE) -f unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system.dir/build.make unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system.dir/build
+.PHONY : test-multibody-flexible-dynamical-system/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -364,6 +377,7 @@ help:
 	@echo "... test"
 	@echo "... uninstall"
 	@echo "... pyrene-state-observation"
+	@echo "... test-multibody-flexible-dynamical-system"
 .PHONY : help
 
 

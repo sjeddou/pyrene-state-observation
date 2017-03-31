@@ -16,3 +16,9 @@ iostream
 pyrene-state-observation/flexibility-estimation/multibody-flexible-dynamical-system.hpp
 -
 
+/home/sjeddou/devel/pyrene-state-observation/unit-testings/test-multibody-flexible-dynamical-system.cpp
+iostream
+-
+../src/multibody-flexible-dynamical-system.cpp
+/home/sjeddou/devel/pyrene-state-observation/src/multibody-flexible-dynamical-system.cpp
+

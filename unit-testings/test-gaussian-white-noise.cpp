@@ -1,5 +1,5 @@
-#include"../src/gaussian-white-noise.cpp"
-#include<iostream>
+#include <state-observation/noise/gaussian-white-noise.hpp>
+#include <iostream>
 using namespace std;
 
 int main(){

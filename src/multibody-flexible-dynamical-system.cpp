@@ -1,6 +1,5 @@
 #include <iostream>
-#include "../include/state-observation/flexibility-estimation/multibody-flexible-dynamical-system.hpp"
-
+#include <pyrene-state-observation/flexibility-estimation/multibody-flexible-dynamical-system.hpp>
 
 using namespace std;
 

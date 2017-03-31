@@ -10,4 +10,4 @@ using namespace std;
    MultibodyFlexibleDynamicalSystem Sys;
    Sys.Start();
    return 0;
-   }
+}
