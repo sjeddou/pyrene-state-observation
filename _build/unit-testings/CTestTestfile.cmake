@@ -4,4 +4,5 @@
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
-ADD_TEST(test-multibody-flexible-dynamical-system "test-multibody-flexible-dynamical-system")
+ADD_TEST(test-multibody-flexible-dynamical-system_exe "test-multibody-flexible-dynamical-system_exe")
+ADD_TEST(test-gaussian-white-noise_exe "test-gaussian-white-noise_exe")

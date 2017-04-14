@@ -17,7 +17,7 @@
 # define PYRENE_STATE_OBSERVATION_CONFIG_HH
 
 // Package version (header).
-# define PYRENE_STATE_OBSERVATION_VERSION "UNKNOWN-dirty"
+# define PYRENE_STATE_OBSERVATION_VERSION "0.0-dirty"
 
 // Handle portable symbol export.
 // Defining manually which symbol should be exported is required

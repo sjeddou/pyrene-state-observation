@@ -34,7 +34,8 @@ ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   FOREACH(file
-      "$ENV{DESTDIR}/usr/local/lib/libpyrene-state-observation.so.UNKNOWN-dirty"
+      "$ENV{DESTDIR}/usr/local/lib/libpyrene-state-observation.so.0.0-dirty"
+      "$ENV{DESTDIR}/usr/local/lib/libpyrene-state-observation.so."
       "$ENV{DESTDIR}/usr/local/lib/libpyrene-state-observation.so"
       )
     IF(EXISTS "${file}" AND
@@ -45,7 +46,7 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     ENDIF()
   ENDFOREACH()
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/usr/local/lib/libpyrene-state-observation.so.UNKNOWN-dirty;/usr/local/lib/libpyrene-state-observation.so")
+   "/usr/local/lib/libpyrene-state-observation.so.0.0-dirty;/usr/local/lib/libpyrene-state-observation.so.;/usr/local/lib/libpyrene-state-observation.so")
   IF (CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
@@ -53,11 +54,13 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
 FILE(INSTALL DESTINATION "/usr/local/lib" TYPE SHARED_LIBRARY FILES
-    "/home/sjeddou/devel/pyrene-state-observation/_build/src/libpyrene-state-observation.so.UNKNOWN-dirty"
+    "/home/sjeddou/devel/pyrene-state-observation/_build/src/libpyrene-state-observation.so.0.0-dirty"
+    "/home/sjeddou/devel/pyrene-state-observation/_build/src/libpyrene-state-observation.so."
     "/home/sjeddou/devel/pyrene-state-observation/_build/src/libpyrene-state-observation.so"
     )
   FOREACH(file
-      "$ENV{DESTDIR}/usr/local/lib/libpyrene-state-observation.so.UNKNOWN-dirty"
+      "$ENV{DESTDIR}/usr/local/lib/libpyrene-state-observation.so.0.0-dirty"
+      "$ENV{DESTDIR}/usr/local/lib/libpyrene-state-observation.so."
       "$ENV{DESTDIR}/usr/local/lib/libpyrene-state-observation.so"
       )
     IF(EXISTS "${file}" AND

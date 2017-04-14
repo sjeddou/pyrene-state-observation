@@ -33,7 +33,7 @@ ADD_REQUIRED_DEPENDENCY("state-observation")
 
 SET(${PROJECT_NAME}_HEADERS
  
-  include/pyrene-state-observation/flexibility-estimation/multibody-flexible-dynamical-system.hpp
+  include/pyrene-state-observation/pyrene-flexibility-estimation/multibody-flexible-dynamical-system.hpp
 
 )
 SET(CXX_DISABLE_WERROR TRUE)
@@ -48,4 +48,3 @@ PKG_CONFIG_APPEND_LIBS(${PROJECT_NAME})
 ADD_SUBDIRECTORY(src)
 ADD_SUBDIRECTORY(unit-testings)
 SETUP_PROJECT_FINALIZE()
-

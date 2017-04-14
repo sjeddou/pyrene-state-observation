@@ -54,7 +54,7 @@ include CMakeFiles/dist_targz.dir/progress.make
 CMakeFiles/dist_targz:
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/sjeddou/devel/pyrene-state-observation/_build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating tar.gz tarball and its signature..."
-	/bin/tar -czf pyrene-state-observation-UNKNOWN-dirty.tar.gz pyrene-state-observation-UNKNOWN-dirty/ && /usr/bin/gpg --detach-sign --armor -o /home/sjeddou/devel/pyrene-state-observation/_build/pyrene-state-observation-UNKNOWN-dirty.tar.gz.sig /home/sjeddou/devel/pyrene-state-observation/_build/pyrene-state-observation-UNKNOWN-dirty.tar.gz
+	/bin/tar -czf pyrene-state-observation-0.0-dirty.tar.gz pyrene-state-observation-0.0-dirty/ && /usr/bin/gpg --detach-sign --armor -o /home/sjeddou/devel/pyrene-state-observation/_build/pyrene-state-observation-0.0-dirty.tar.gz.sig /home/sjeddou/devel/pyrene-state-observation/_build/pyrene-state-observation-0.0-dirty.tar.gz
 
 dist_targz: CMakeFiles/dist_targz
 dist_targz: CMakeFiles/dist_targz.dir/build.make

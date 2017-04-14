@@ -338,17 +338,30 @@ pyrene-state-observation/fast:
 .PHONY : pyrene-state-observation/fast
 
 #=============================================================================
-# Target rules for targets named test-multibody-flexible-dynamical-system
+# Target rules for targets named test-gaussian-white-noise_exe
 
 # Build rule for target.
-test-multibody-flexible-dynamical-system: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test-multibody-flexible-dynamical-system
-.PHONY : test-multibody-flexible-dynamical-system
+test-gaussian-white-noise_exe: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test-gaussian-white-noise_exe
+.PHONY : test-gaussian-white-noise_exe
 
 # fast build rule for target.
-test-multibody-flexible-dynamical-system/fast:
-	$(MAKE) -f unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system.dir/build.make unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system.dir/build
-.PHONY : test-multibody-flexible-dynamical-system/fast
+test-gaussian-white-noise_exe/fast:
+	$(MAKE) -f unit-testings/CMakeFiles/test-gaussian-white-noise_exe.dir/build.make unit-testings/CMakeFiles/test-gaussian-white-noise_exe.dir/build
+.PHONY : test-gaussian-white-noise_exe/fast
+
+#=============================================================================
+# Target rules for targets named test-multibody-flexible-dynamical-system_exe
+
+# Build rule for target.
+test-multibody-flexible-dynamical-system_exe: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test-multibody-flexible-dynamical-system_exe
+.PHONY : test-multibody-flexible-dynamical-system_exe
+
+# fast build rule for target.
+test-multibody-flexible-dynamical-system_exe/fast:
+	$(MAKE) -f unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system_exe.dir/build.make unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system_exe.dir/build
+.PHONY : test-multibody-flexible-dynamical-system_exe/fast
 
 # Help Target
 help:
@@ -377,7 +390,8 @@ help:
 	@echo "... test"
 	@echo "... uninstall"
 	@echo "... pyrene-state-observation"
-	@echo "... test-multibody-flexible-dynamical-system"
+	@echo "... test-gaussian-white-noise_exe"
+	@echo "... test-multibody-flexible-dynamical-system_exe"
 .PHONY : help
 
 

@@ -14,5 +14,5 @@
 // along with jrl-mathtools.  If not, see <http://www.gnu.org/licenses/>.
 
 #define PACKAGE_NAME "pyrene-state-observation"
-#define PACKAGE_STRING "pyrene-state-observation UNKNOWN-dirty"
-#define PACKAGE_VERSION "UNKNOWN-dirty"
+#define PACKAGE_STRING "pyrene-state-observation 0.0-dirty"
+#define PACKAGE_VERSION "0.0-dirty"

@@ -12,7 +12,7 @@ doxygendocdir=/usr/local/share/doc/pyrene-state-observation/doxygen-html
 Name: pyrene-state-observation
 Description: General implementation of observers.
 URL: 
-Version: UNKNOWN-dirty
+Version: 0.0-dirty
 Requires: eigen3 >= 3.0.0
 Conflicts: 
 Libs: -L${libdir}  -lpyrene-state-observation

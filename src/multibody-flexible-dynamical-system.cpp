@@ -1,7 +1,11 @@
 #include <iostream>
-#include <pyrene-state-observation/flexibility-estimation/multibody-flexible-dynamical-system.hpp>
+#include <pyrene-state-observation/pyrene-flexibility-estimation/multibody-flexible-dynamical-system.hpp>
 
 using namespace std;
+namespace pyreneStateObservation
+{
+    namespace pyreneFlexibilityEstimation
+    {
 
    MultibodyFlexibleDynamicalSystem::MultibodyFlexibleDynamicalSystem()
    {
@@ -14,3 +18,5 @@ using namespace std;
    cout <<"Starting" <<endl;
    }
 
+    }
+}

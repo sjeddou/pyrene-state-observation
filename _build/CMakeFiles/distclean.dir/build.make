@@ -54,7 +54,7 @@ include CMakeFiles/distclean.dir/progress.make
 CMakeFiles/distclean:
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/sjeddou/devel/pyrene-state-observation/_build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Cleaning dist sources..."
-	rm -rf /home/sjeddou/devel/pyrene-state-observation/_build/pyrene-state-observation-UNKNOWN-dirty/
+	rm -rf /home/sjeddou/devel/pyrene-state-observation/_build/pyrene-state-observation-0.0-dirty/
 
 distclean: CMakeFiles/distclean
 distclean: CMakeFiles/distclean.dir/build.make
