@@ -29,19 +29,22 @@ SET(CUSTOM_HEADER_DIR "${PROJECT_NAME}")
 
 # Search for dependencies.
 
-ADD_REQUIRED_DEPENDENCY("state-observation")
 
-SET(${PROJECT_NAME}_HEADERS
- 
-  include/pyrene-state-observation/pyrene-flexibility-estimation/multibody-flexible-dynamical-system.hpp
 
-)
 SET(CXX_DISABLE_WERROR TRUE)
 
 SETUP_PROJECT()
 
 SEARCH_FOR_BOOST()
 SEARCH_FOR_EIGEN()
+
+ADD_REQUIRED_DEPENDENCY("state-observation")
+
+SET(${PROJECT_NAME}_HEADERS
+
+  include/pyrene-state-observation/pyrene-flexibility-estimation/multibody-flexible-dynamical-system.hpp
+  include/pyrene-state-observation/tools/pyrene.hpp
+)
 
 PKG_CONFIG_APPEND_LIBS(${PROJECT_NAME})
 

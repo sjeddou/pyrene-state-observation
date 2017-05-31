@@ -1,27 +1,4 @@
-# Unit Testing
-# add required dependencies
-# Search for dependencies.
-
-
-# provide path to dependency libraries
-#INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/include)
-#LINK_DIRECTORIES(${${PROJECT_NAME}_BINARY_DIR}/src)
-
-
-#ADD_EXECUTABLE(test-multibody-flexible-dynamical-system test-multibody-flexible-dynamical-system.cpp ${${PROJECT_NAME}_ABSOLUTE_HEADERS})
-#ADD_EXECUTABLE(test-gaussian-white-noise test-gaussian-white-noise.cpp ${${PROJECT_NAME}_ABSOLUTE_HEADERS})
-
-#PKG_CONFIG_USE_DEPENDENCY(test-multibody-flexible-dynamical-system state-observation)
-#PKG_CONFIG_USE_DEPENDENCY(test-gaussian-white-noise state-observation)
-
-#TARGET_LINK_LIBRARIES(test-multibody-flexible-dynamical-system ${Boost_LIBRARIES} ${PROJECT_NAME} )
-#TARGET_LINK_LIBRARIES(test-multibody-flexible-dynamical-system ${Boost_LIBRARIES} ${PROJECT_NAME} state-observation)
-#TARGET_LINK_LIBRARIES(test-gaussian-white-noise ${Boost_LIBRARIES} ${PROJECT_NAME} state-observation)
-
-
-#ADD_TEST(test-multibody-flexible-dynamical-system test-multibody-flexible-dynamical-system)
-#ADD_TEST(test-gaussian-white-noise test-guassian-white-noise)
-
+# Unit Testing CMakeLists
 
 
 ADD_DEFINITIONS(-DDEBUG=2)
@@ -53,10 +30,7 @@ FOREACH(test ${tests})
   ADD_EXECUTABLE(${EXECUTABLE_NAME}
     ${test}.cpp ${${PROJECT_NAME}_ABSOLUTE_HEADERS})
 
-  #TARGET_LINK_LIBRARIES(${EXECUTABLE_NAME}
-    #controller-pd
-   # )
-
+  
   
   PKG_CONFIG_USE_DEPENDENCY(${EXECUTABLE_NAME} state-observation)
 

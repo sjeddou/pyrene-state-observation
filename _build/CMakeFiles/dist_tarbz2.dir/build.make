@@ -54,7 +54,7 @@ include CMakeFiles/dist_tarbz2.dir/progress.make
 CMakeFiles/dist_tarbz2:
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/sjeddou/devel/pyrene-state-observation/_build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating tar.bz2 tarball and its signature..."
-	/bin/tar -cjf pyrene-state-observation-0.0-dirty.tar.bz2 pyrene-state-observation-0.0-dirty/ && /usr/bin/gpg --detach-sign --armor -o /home/sjeddou/devel/pyrene-state-observation/_build/pyrene-state-observation-0.0-dirty.tar.bz2.sig /home/sjeddou/devel/pyrene-state-observation/_build/pyrene-state-observation-0.0-dirty.tar.bz2
+	/bin/tar -cjf pyrene-state-observation-0.0-1-g051d-dirty.tar.bz2 pyrene-state-observation-0.0-1-g051d-dirty/ && /usr/bin/gpg --detach-sign --armor -o /home/sjeddou/devel/pyrene-state-observation/_build/pyrene-state-observation-0.0-1-g051d-dirty.tar.bz2.sig /home/sjeddou/devel/pyrene-state-observation/_build/pyrene-state-observation-0.0-1-g051d-dirty.tar.bz2
 
 dist_tarbz2: CMakeFiles/dist_tarbz2
 dist_tarbz2: CMakeFiles/dist_tarbz2.dir/build.make
