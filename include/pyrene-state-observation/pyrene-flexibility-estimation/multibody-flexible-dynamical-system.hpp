@@ -74,12 +74,13 @@ namespace pyreneStateObservation
 
 
 
-      //virtual VectorXf getMomentaFromForces(const VectorXf& x, const VectorXf& u);
+
 
 
       /// Description of the state dynamics
-     // virtual std::vector<long> stateDynamics(const stateObservation::vector& x, const stateObservation::vector& u,unsigned k);
-     //virtual pyreneStateObservation::vector stateDynamics(const pyreneStateObservation::vector& x, const pyreneStateObservation::vector& u,unsigned k);
+      // virtual std::vector<long> stateDynamics(const stateObservation::vector& x, const stateObservation::vector& u,unsigned k);
+      //virtual VectorXd stateDynamics(const pyreneStateObservation::VectorXd& x, const pyreneStateObservation::VectorXd& u,unsigned k);
+
 
     private:
 
@@ -90,13 +91,59 @@ namespace pyreneStateObservation
       double dt_;
       unsigned contactModel_;
       static const unsigned stateSize_=26;
-
       Matrix3f Kpj_, Kdj_;
-      VectorXf fc_;
-      Vector3f fm, tm ;
       unsigned nbContacts_;
+      Matrix3d& computeRotation_(const Vector3d & x, int i);
+
+      struct Optimization //needed for */ComputeRotation
+      {
+          Matrix3d curRotation0;
+                  Vector3d orientationVector0;
+                  Matrix3d curRotation1;
+                  Vector3d orientationVector1;
+                  Matrix3d curRotation2;
+                  Vector3d orientationVector2;
+                  Matrix3d curRotation3;
+                  Vector3d orientationVector3;
+
+                  Optimization()
+                    :
+                    curRotation0(Matrix3d::Identity()),
+                    orientationVector0(Vector3d::Zero()),
+                    curRotation1(Matrix3d::Identity()),
+                    orientationVector1(Vector3d::Zero()),
+                    curRotation2(Matrix3d::Identity()),
+                    orientationVector2(Vector3d::Zero()),
+                    curRotation3(Matrix3d::Identity()),
+                    orientationVector3(Vector3d::Zero())
+                  {}
+
+                  inline Vector3d& orientationVector(int i)
+                  {
+                    if (i==0)
+                      return orientationVector0;
+                    if (i==1)
+                      return orientationVector1;
+                    if (i==2)
+                      return orientationVector2;
+
+                    return orientationVector3;
+                  }
+
+                  inline Matrix3d& curRotation(int i)
+                  {
+                    if (i==0)
+                      return curRotation0;
+                    if (i==1)
+                      return curRotation1;
+                    if (i==2)
+                      return curRotation2;
+
+                    return curRotation3;
+                  }
 
 
+      }op_;
 
 
 
