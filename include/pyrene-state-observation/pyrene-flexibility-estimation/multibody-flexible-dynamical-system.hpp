@@ -40,12 +40,12 @@ namespace pyreneStateObservation
       struct state
             {
           ///indexes of different components of a satet vector
-              static const unsigned jointPos = 0;
-              static const unsigned jointVel = 3;
-              static const unsigned flexConf = 6;
-              static const unsigned flexConfDot = 9;
-              static const unsigned jointTorque = 12;
-              static const unsigned contactForces =  24;
+              static const unsigned jointConf = 0;
+              static const unsigned jointVel = 6;
+              static const unsigned flexConf = 12;
+              static const unsigned flexVel = 18;
+              static const unsigned jointTorque =24;
+              static const unsigned contactForces =30;
 
             };
       struct contactModel
@@ -78,9 +78,9 @@ namespace pyreneStateObservation
 
 
       /// Description of the state dynamics
-      // virtual std::vector<long> stateDynamics(const stateObservation::vector& x, const stateObservation::vector& u,unsigned k);
+      //virtual std::vector<long> stateDynamics(const stateObservation::vector& x, const stateObservation::vector& u,unsigned k);
       //virtual VectorXd stateDynamics(const pyreneStateObservation::VectorXd& x, const pyreneStateObservation::VectorXd& u,unsigned k);
-
+      virtual stateObservation::Vector stateDynamics(const stateObservation::Vector& x, const stateObservation::Vector& u,unsigned k);
 
     private:
 
@@ -91,13 +91,28 @@ namespace pyreneStateObservation
       double dt_;
       unsigned contactModel_;
       static const unsigned stateSize_=26;
-      Matrix3f Kpj_, Kdj_;
+      Matrix3d Kpj_, Kdj_;
       unsigned nbContacts_;
       Matrix3d& computeRotation_(const Vector3d & x, int i);
 
-      struct Optimization //needed for */ComputeRotation
-      {
-          Matrix3d curRotation0;
+      VectorXd xk_;
+      VectorXd uk_;
+      struct Optimization
+
+      {     ///StateDyanmics
+
+                  Vector3d positionFlex;
+                  Vector3d orientationFlex;
+                  Vector3d velocityFlex;
+                  Vector3d angularVelocityFlex;
+                  stateObservation::IndexedMatrixArray efforts;
+                  //Eigen::Array::
+
+
+
+            ///ComputeRotation
+
+                  Matrix3d curRotation0;
                   Vector3d orientationVector0;
                   Matrix3d curRotation1;
                   Vector3d orientationVector1;
