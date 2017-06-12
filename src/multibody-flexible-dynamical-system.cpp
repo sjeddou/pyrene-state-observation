@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <pyrene-state-observation/pyrene-flexibility-estimation/multibody-flexible-dynamical-system.hpp>
+
 #include <stdexcept>
 
 using namespace std;
@@ -65,7 +66,10 @@ namespace pyreneFlexibilityEstimation
    }
 
 
- /// State dynamics & computeRotation
+
+
+
+ /// State dynamics & computeRotation & IterateDynamicsEuler
    VectorXd MultibodyFlexibleDynamicalSystem::stateDynamics(const VectorXd& x, const VectorXd& u, unsigned k)
         {
             assertStateVector_(x);
@@ -81,9 +85,28 @@ namespace pyreneFlexibilityEstimation
             for (int i=0; i<pyrene::contact::nbModeledMax; ++i)
                         op_.efforts.setValue(x.segment(state::contactForces+6*i,6),i);
 
+            unsigned nbContacts(getContactsNumber());
 
+            for (unsigned i = 0; i<nbContacts ; ++i)
+            {
+             // Positions
+             op_.contactPosV.setValue(u.segment<3>(input::contacts + 12*i),i);
+             op_.contactOriV.setValue(u.segment<3>(input::contacts +12*i+3),i);
+
+             // Velocities
+             op_.contactVelArray.setValue(u.segment<3>(input::contacts + 12*i +6),i);
+             op_.contactAngVelArray.setValue(u.segment<3>(input::contacts +12*i +9),i);
+
+             //
+
+
+            }
 
          }
+
+
+
+
 
 
 }

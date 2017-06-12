@@ -39,7 +39,7 @@ namespace pyreneStateObservation
             };
       struct state
             {
-          ///indexes of different components of a satet vector
+          ///indexes of different components of a state vector
               static const unsigned jointConf = 0;
               static const unsigned jointVel = 6;
               static const unsigned flexConf = 12;
@@ -73,14 +73,10 @@ namespace pyreneStateObservation
 
 
 
-
-
-
-
       /// Description of the state dynamics
       //virtual std::vector<long> stateDynamics(const stateObservation::vector& x, const stateObservation::vector& u,unsigned k);
       //virtual VectorXd stateDynamics(const pyreneStateObservation::VectorXd& x, const pyreneStateObservation::VectorXd& u,unsigned k);
-      virtual stateObservation::Vector stateDynamics(const stateObservation::Vector& x, const stateObservation::Vector& u,unsigned k);
+      virtual stateObservation::Vector stateDynamics(const VectorXd& x, const VectorXd& u,unsigned k);
 
     private:
 
@@ -106,7 +102,10 @@ namespace pyreneStateObservation
                   Vector3d velocityFlex;
                   Vector3d angularVelocityFlex;
                   stateObservation::IndexedMatrixArray efforts;
-                  //Eigen::Array::
+                  stateObservation::IndexedMatrixArray contactPosV;
+                  stateObservation::IndexedMatrixArray contactOriV;
+                  stateObservation::IndexedMatrixArray contactVelArray;
+                  stateObservation::IndexedMatrixArray contactAngVelArray;
 
 
 

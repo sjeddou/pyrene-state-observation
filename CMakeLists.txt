@@ -44,6 +44,8 @@ SET(${PROJECT_NAME}_HEADERS
 
   include/pyrene-state-observation/pyrene-flexibility-estimation/multibody-flexible-dynamical-system.hpp
   include/pyrene-state-observation/tools/pyrene.hpp
+  include/pyrene-state-observation/tools/definitions.hpp
+  include/pyrene-state-observation/tools/definitions.hpp
   include/pyrene-state-observation/pyrene-flexibility-estimation/model-base-ekf-flex-estimator-imu.hpp
 )
 

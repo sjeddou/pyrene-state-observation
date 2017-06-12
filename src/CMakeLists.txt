@@ -20,6 +20,7 @@ ADD_LIBRARY(${LIBRARY_NAME}
   SHARED
   model-base-ekf-flex-estimator-imu.cpp
   multibody-flexible-dynamical-system.cpp
+  definitions.cpp
   ${${PROJECT_NAME}_ABSOLUTE_HEADERS}
   )
 
