@@ -7,3 +7,5 @@
 ADD_TEST(test-multibody-flexible-dynamical-system_exe "test-multibody-flexible-dynamical-system_exe")
 ADD_TEST(test-gaussian-white-noise_exe "test-gaussian-white-noise_exe")
 ADD_TEST(test-definitions_exe "test-definitions_exe")
+ADD_TEST(test-kalman-filter-base_exe "test-kalman-filter-base_exe")
+ADD_TEST(test-inertia-pinocchio_exe "test-inertia-pinocchio_exe")

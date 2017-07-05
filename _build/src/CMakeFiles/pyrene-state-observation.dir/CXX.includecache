@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+../include/pyrene-state-observation/pyrene-flexibility-estimation/multibody-ekf-flexibility-estimator.hpp
+state-observation/flexibility-estimation/ekf-flexibility-estimator-base.hpp
+-
+pyrene-state-observation/pyrene-flexibility-estimation/multibody-flexible-dynamical-system.hpp
+-
+
 ../include/pyrene-state-observation/pyrene-flexibility-estimation/multibody-flexible-dynamical-system.hpp
 iostream
 -
@@ -22,24 +28,6 @@ state-observation/dynamical-system/dynamical-system-functor-base.hpp
 state-observation/dynamical-system/algorithm/rigid-body-kinematics.hpp
 -
 
-../include/pyrene-state-observation/tools/definitions.hpp
-vector
--
-deque
--
-iostream
--
-boost/assert.hpp
--
-Eigen/Core
--
-Eigen/Geometry
--
-fstream
--
-state-observation/tools/definitions.hxx
--
-
 ../include/pyrene-state-observation/tools/pyrene.hpp
 vector
 -
@@ -53,15 +41,21 @@ Eigen/Core
 -
 Eigen/Geometry
 -
-
-/home/sjeddou/devel/pyrene-state-observation/src/definitions.cpp
-fstream
+vector
 -
-pyrene-state-observation/tools/definitions.hpp
+deque
+-
+fstream
 -
 
 /home/sjeddou/devel/pyrene-state-observation/src/model-base-ekf-flex-estimator-imu.cpp
 state-observation/flexibility-estimation/model-base-ekf-flex-estimator-imu.hpp
+-
+state-observation/tools/miscellaneous-algorithms.hpp
+-
+
+/home/sjeddou/devel/pyrene-state-observation/src/multibody-ekf-flexibility-estimator.cpp
+pyrene-state-observation/pyrene-flexibility-estimation/multibody-ekf-flexibility-estimator.hpp
 -
 state-observation/tools/miscellaneous-algorithms.hpp
 -

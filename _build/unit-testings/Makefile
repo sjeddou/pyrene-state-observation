@@ -184,6 +184,34 @@ test-gaussian-white-noise_exe/fast:
 .PHONY : test-gaussian-white-noise_exe/fast
 
 # Convenience name for target.
+unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/rule:
+	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f CMakeFiles/Makefile2 unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/rule
+.PHONY : unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/rule
+
+# Convenience name for target.
+test-inertia-pinocchio_exe: unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/rule
+.PHONY : test-inertia-pinocchio_exe
+
+# fast build rule for target.
+test-inertia-pinocchio_exe/fast:
+	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/build.make unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/build
+.PHONY : test-inertia-pinocchio_exe/fast
+
+# Convenience name for target.
+unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/rule:
+	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f CMakeFiles/Makefile2 unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/rule
+.PHONY : unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/rule
+
+# Convenience name for target.
+test-kalman-filter-base_exe: unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/rule
+.PHONY : test-kalman-filter-base_exe
+
+# fast build rule for target.
+test-kalman-filter-base_exe/fast:
+	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/build.make unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/build
+.PHONY : test-kalman-filter-base_exe/fast
+
+# Convenience name for target.
 unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system_exe.dir/rule:
 	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f CMakeFiles/Makefile2 unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system_exe.dir/rule
 .PHONY : unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system_exe.dir/rule
@@ -245,6 +273,54 @@ test-gaussian-white-noise.cpp.s:
 	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f unit-testings/CMakeFiles/test-gaussian-white-noise_exe.dir/build.make unit-testings/CMakeFiles/test-gaussian-white-noise_exe.dir/test-gaussian-white-noise.cpp.s
 .PHONY : test-gaussian-white-noise.cpp.s
 
+test-inertia-pinocchio.o: test-inertia-pinocchio.cpp.o
+.PHONY : test-inertia-pinocchio.o
+
+# target to build an object file
+test-inertia-pinocchio.cpp.o:
+	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/build.make unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/test-inertia-pinocchio.cpp.o
+.PHONY : test-inertia-pinocchio.cpp.o
+
+test-inertia-pinocchio.i: test-inertia-pinocchio.cpp.i
+.PHONY : test-inertia-pinocchio.i
+
+# target to preprocess a source file
+test-inertia-pinocchio.cpp.i:
+	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/build.make unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/test-inertia-pinocchio.cpp.i
+.PHONY : test-inertia-pinocchio.cpp.i
+
+test-inertia-pinocchio.s: test-inertia-pinocchio.cpp.s
+.PHONY : test-inertia-pinocchio.s
+
+# target to generate assembly for a file
+test-inertia-pinocchio.cpp.s:
+	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/build.make unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/test-inertia-pinocchio.cpp.s
+.PHONY : test-inertia-pinocchio.cpp.s
+
+test-kalman-filter-base.o: test-kalman-filter-base.cpp.o
+.PHONY : test-kalman-filter-base.o
+
+# target to build an object file
+test-kalman-filter-base.cpp.o:
+	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/build.make unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/test-kalman-filter-base.cpp.o
+.PHONY : test-kalman-filter-base.cpp.o
+
+test-kalman-filter-base.i: test-kalman-filter-base.cpp.i
+.PHONY : test-kalman-filter-base.i
+
+# target to preprocess a source file
+test-kalman-filter-base.cpp.i:
+	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/build.make unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/test-kalman-filter-base.cpp.i
+.PHONY : test-kalman-filter-base.cpp.i
+
+test-kalman-filter-base.s: test-kalman-filter-base.cpp.s
+.PHONY : test-kalman-filter-base.s
+
+# target to generate assembly for a file
+test-kalman-filter-base.cpp.s:
+	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/build.make unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/test-kalman-filter-base.cpp.s
+.PHONY : test-kalman-filter-base.cpp.s
+
 test-multibody-flexible-dynamical-system.o: test-multibody-flexible-dynamical-system.cpp.o
 .PHONY : test-multibody-flexible-dynamical-system.o
 
@@ -284,6 +360,8 @@ help:
 	@echo "... test"
 	@echo "... test-definitions_exe"
 	@echo "... test-gaussian-white-noise_exe"
+	@echo "... test-inertia-pinocchio_exe"
+	@echo "... test-kalman-filter-base_exe"
 	@echo "... test-multibody-flexible-dynamical-system_exe"
 	@echo "... test-definitions.o"
 	@echo "... test-definitions.i"
@@ -291,6 +369,12 @@ help:
 	@echo "... test-gaussian-white-noise.o"
 	@echo "... test-gaussian-white-noise.i"
 	@echo "... test-gaussian-white-noise.s"
+	@echo "... test-inertia-pinocchio.o"
+	@echo "... test-inertia-pinocchio.i"
+	@echo "... test-inertia-pinocchio.s"
+	@echo "... test-kalman-filter-base.o"
+	@echo "... test-kalman-filter-base.i"
+	@echo "... test-kalman-filter-base.s"
 	@echo "... test-multibody-flexible-dynamical-system.o"
 	@echo "... test-multibody-flexible-dynamical-system.i"
 	@echo "... test-multibody-flexible-dynamical-system.s"

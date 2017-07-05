@@ -2,20 +2,23 @@
 #include "pinocchio/multibody/model.hpp"
 #include "pinocchio/parsers/urdf.hpp"
 
-
-using namespace std;
-
-
+using namespace se3;
 //filename : "/opt/openrobots/share/talos_data/urdf/talos_reduced.urdf"
 
 
 int main()
 {
     const std::string filename= "/opt/openrobots/share/talos_data/robots/talos_reduced.urdf";
-    cout << "Parse Filename : " << filename << endl;
-    se3::Model model;
+    Model model;
+    std::cout << "Build urdf model" <<std::endl;
     se3::urdf::buildModel(filename, model, false);
-    cout << "Build urdf model" <<endl;
+    se3::Data data(model);
+    Eigen::MatrixXd M(model.nv,model.nv);
+    data.M.fill(0);
+
+    std::cout << "Inertia matrix:\n " <<data.M <<std::endl;
+
     return 0;
 
 }
+

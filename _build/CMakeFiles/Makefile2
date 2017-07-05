@@ -517,12 +517,16 @@ clean: src/CMakeFiles/pyrene-state-observation.dir/clean
 # Convenience name for "all" pass in the directory.
 unit-testings/all: unit-testings/CMakeFiles/test-definitions_exe.dir/all
 unit-testings/all: unit-testings/CMakeFiles/test-gaussian-white-noise_exe.dir/all
+unit-testings/all: unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/all
+unit-testings/all: unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/all
 unit-testings/all: unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system_exe.dir/all
 .PHONY : unit-testings/all
 
 # Convenience name for "clean" pass in the directory.
 unit-testings/clean: unit-testings/CMakeFiles/test-definitions_exe.dir/clean
 unit-testings/clean: unit-testings/CMakeFiles/test-gaussian-white-noise_exe.dir/clean
+unit-testings/clean: unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/clean
+unit-testings/clean: unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/clean
 unit-testings/clean: unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system_exe.dir/clean
 .PHONY : unit-testings/clean
 
@@ -601,13 +605,83 @@ clean: unit-testings/CMakeFiles/test-gaussian-white-noise_exe.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir
+
+# All Build rule for target.
+unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/all: src/CMakeFiles/pyrene-state-observation.dir/all
+	$(MAKE) -f unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/build.make unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/depend
+	$(MAKE) -f unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/build.make unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sjeddou/devel/pyrene-state-observation/_build/CMakeFiles  16
+	@echo "Built target test-inertia-pinocchio_exe"
+.PHONY : unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/all
+
+# Include target in all.
+all: unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sjeddou/devel/pyrene-state-observation/_build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sjeddou/devel/pyrene-state-observation/_build/CMakeFiles 0
+.PHONY : unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/rule
+
+# Convenience name for target.
+test-inertia-pinocchio_exe: unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/rule
+.PHONY : test-inertia-pinocchio_exe
+
+# clean rule for target.
+unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/clean:
+	$(MAKE) -f unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/build.make unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/clean
+.PHONY : unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/clean
+
+# clean rule for target.
+clean: unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir
+
+# All Build rule for target.
+unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/all: src/CMakeFiles/pyrene-state-observation.dir/all
+	$(MAKE) -f unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/build.make unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/depend
+	$(MAKE) -f unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/build.make unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sjeddou/devel/pyrene-state-observation/_build/CMakeFiles  17
+	@echo "Built target test-kalman-filter-base_exe"
+.PHONY : unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/all
+
+# Include target in all.
+all: unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sjeddou/devel/pyrene-state-observation/_build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sjeddou/devel/pyrene-state-observation/_build/CMakeFiles 0
+.PHONY : unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/rule
+
+# Convenience name for target.
+test-kalman-filter-base_exe: unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/rule
+.PHONY : test-kalman-filter-base_exe
+
+# clean rule for target.
+unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/clean:
+	$(MAKE) -f unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/build.make unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/clean
+.PHONY : unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/clean
+
+# clean rule for target.
+clean: unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system_exe.dir
 
 # All Build rule for target.
 unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system_exe.dir/all: src/CMakeFiles/pyrene-state-observation.dir/all
 	$(MAKE) -f unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system_exe.dir/build.make unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system_exe.dir/depend
 	$(MAKE) -f unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system_exe.dir/build.make unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system_exe.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/sjeddou/devel/pyrene-state-observation/_build/CMakeFiles  16
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/sjeddou/devel/pyrene-state-observation/_build/CMakeFiles  18
 	@echo "Built target test-multibody-flexible-dynamical-system_exe"
 .PHONY : unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system_exe.dir/all
 

@@ -25,8 +25,5 @@ int main()
 
   cout << "Vector m*g.uz is \n" << pyrene::m*Vector3(9.8,0,0)<< endl; //changer les components du vecteur
 
-
-
-
-
 }
+

@@ -103,5 +103,7 @@ SET(CMAKE_DEPEND_INFO_FILES
   "src/CMakeFiles/pyrene-state-observation.dir/DependInfo.cmake"
   "unit-testings/CMakeFiles/test-definitions_exe.dir/DependInfo.cmake"
   "unit-testings/CMakeFiles/test-gaussian-white-noise_exe.dir/DependInfo.cmake"
+  "unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/DependInfo.cmake"
+  "unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/DependInfo.cmake"
   "unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system_exe.dir/DependInfo.cmake"
   )

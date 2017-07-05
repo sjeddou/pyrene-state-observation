@@ -101,48 +101,48 @@ src/CMakeFiles/pyrene-state-observation.dir/multibody-flexible-dynamical-system.
 
 src/CMakeFiles/pyrene-state-observation.dir/multibody-flexible-dynamical-system.cpp.o.provides.build: src/CMakeFiles/pyrene-state-observation.dir/multibody-flexible-dynamical-system.cpp.o
 
-src/CMakeFiles/pyrene-state-observation.dir/definitions.cpp.o: src/CMakeFiles/pyrene-state-observation.dir/flags.make
-src/CMakeFiles/pyrene-state-observation.dir/definitions.cpp.o: ../src/definitions.cpp
+src/CMakeFiles/pyrene-state-observation.dir/multibody-ekf-flexibility-estimator.cpp.o: src/CMakeFiles/pyrene-state-observation.dir/flags.make
+src/CMakeFiles/pyrene-state-observation.dir/multibody-ekf-flexibility-estimator.cpp.o: ../src/multibody-ekf-flexibility-estimator.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/sjeddou/devel/pyrene-state-observation/_build/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/pyrene-state-observation.dir/definitions.cpp.o"
-	cd /home/sjeddou/devel/pyrene-state-observation/_build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pyrene-state-observation.dir/definitions.cpp.o -c /home/sjeddou/devel/pyrene-state-observation/src/definitions.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/pyrene-state-observation.dir/multibody-ekf-flexibility-estimator.cpp.o"
+	cd /home/sjeddou/devel/pyrene-state-observation/_build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pyrene-state-observation.dir/multibody-ekf-flexibility-estimator.cpp.o -c /home/sjeddou/devel/pyrene-state-observation/src/multibody-ekf-flexibility-estimator.cpp
 
-src/CMakeFiles/pyrene-state-observation.dir/definitions.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pyrene-state-observation.dir/definitions.cpp.i"
-	cd /home/sjeddou/devel/pyrene-state-observation/_build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sjeddou/devel/pyrene-state-observation/src/definitions.cpp > CMakeFiles/pyrene-state-observation.dir/definitions.cpp.i
+src/CMakeFiles/pyrene-state-observation.dir/multibody-ekf-flexibility-estimator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pyrene-state-observation.dir/multibody-ekf-flexibility-estimator.cpp.i"
+	cd /home/sjeddou/devel/pyrene-state-observation/_build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sjeddou/devel/pyrene-state-observation/src/multibody-ekf-flexibility-estimator.cpp > CMakeFiles/pyrene-state-observation.dir/multibody-ekf-flexibility-estimator.cpp.i
 
-src/CMakeFiles/pyrene-state-observation.dir/definitions.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pyrene-state-observation.dir/definitions.cpp.s"
-	cd /home/sjeddou/devel/pyrene-state-observation/_build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sjeddou/devel/pyrene-state-observation/src/definitions.cpp -o CMakeFiles/pyrene-state-observation.dir/definitions.cpp.s
+src/CMakeFiles/pyrene-state-observation.dir/multibody-ekf-flexibility-estimator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pyrene-state-observation.dir/multibody-ekf-flexibility-estimator.cpp.s"
+	cd /home/sjeddou/devel/pyrene-state-observation/_build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sjeddou/devel/pyrene-state-observation/src/multibody-ekf-flexibility-estimator.cpp -o CMakeFiles/pyrene-state-observation.dir/multibody-ekf-flexibility-estimator.cpp.s
 
-src/CMakeFiles/pyrene-state-observation.dir/definitions.cpp.o.requires:
-.PHONY : src/CMakeFiles/pyrene-state-observation.dir/definitions.cpp.o.requires
+src/CMakeFiles/pyrene-state-observation.dir/multibody-ekf-flexibility-estimator.cpp.o.requires:
+.PHONY : src/CMakeFiles/pyrene-state-observation.dir/multibody-ekf-flexibility-estimator.cpp.o.requires
 
-src/CMakeFiles/pyrene-state-observation.dir/definitions.cpp.o.provides: src/CMakeFiles/pyrene-state-observation.dir/definitions.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/pyrene-state-observation.dir/build.make src/CMakeFiles/pyrene-state-observation.dir/definitions.cpp.o.provides.build
-.PHONY : src/CMakeFiles/pyrene-state-observation.dir/definitions.cpp.o.provides
+src/CMakeFiles/pyrene-state-observation.dir/multibody-ekf-flexibility-estimator.cpp.o.provides: src/CMakeFiles/pyrene-state-observation.dir/multibody-ekf-flexibility-estimator.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/pyrene-state-observation.dir/build.make src/CMakeFiles/pyrene-state-observation.dir/multibody-ekf-flexibility-estimator.cpp.o.provides.build
+.PHONY : src/CMakeFiles/pyrene-state-observation.dir/multibody-ekf-flexibility-estimator.cpp.o.provides
 
-src/CMakeFiles/pyrene-state-observation.dir/definitions.cpp.o.provides.build: src/CMakeFiles/pyrene-state-observation.dir/definitions.cpp.o
+src/CMakeFiles/pyrene-state-observation.dir/multibody-ekf-flexibility-estimator.cpp.o.provides.build: src/CMakeFiles/pyrene-state-observation.dir/multibody-ekf-flexibility-estimator.cpp.o
 
 # Object files for target pyrene-state-observation
 pyrene__state__observation_OBJECTS = \
 "CMakeFiles/pyrene-state-observation.dir/model-base-ekf-flex-estimator-imu.cpp.o" \
 "CMakeFiles/pyrene-state-observation.dir/multibody-flexible-dynamical-system.cpp.o" \
-"CMakeFiles/pyrene-state-observation.dir/definitions.cpp.o"
+"CMakeFiles/pyrene-state-observation.dir/multibody-ekf-flexibility-estimator.cpp.o"
 
 # External object files for target pyrene-state-observation
 pyrene__state__observation_EXTERNAL_OBJECTS =
 
-src/libpyrene-state-observation.so.0.0-5-gd8ae-dirty: src/CMakeFiles/pyrene-state-observation.dir/model-base-ekf-flex-estimator-imu.cpp.o
-src/libpyrene-state-observation.so.0.0-5-gd8ae-dirty: src/CMakeFiles/pyrene-state-observation.dir/multibody-flexible-dynamical-system.cpp.o
-src/libpyrene-state-observation.so.0.0-5-gd8ae-dirty: src/CMakeFiles/pyrene-state-observation.dir/definitions.cpp.o
-src/libpyrene-state-observation.so.0.0-5-gd8ae-dirty: src/CMakeFiles/pyrene-state-observation.dir/build.make
-src/libpyrene-state-observation.so.0.0-5-gd8ae-dirty: src/CMakeFiles/pyrene-state-observation.dir/link.txt
+src/libpyrene-state-observation.so.0.0-7-g5c10-dirty: src/CMakeFiles/pyrene-state-observation.dir/model-base-ekf-flex-estimator-imu.cpp.o
+src/libpyrene-state-observation.so.0.0-7-g5c10-dirty: src/CMakeFiles/pyrene-state-observation.dir/multibody-flexible-dynamical-system.cpp.o
+src/libpyrene-state-observation.so.0.0-7-g5c10-dirty: src/CMakeFiles/pyrene-state-observation.dir/multibody-ekf-flexibility-estimator.cpp.o
+src/libpyrene-state-observation.so.0.0-7-g5c10-dirty: src/CMakeFiles/pyrene-state-observation.dir/build.make
+src/libpyrene-state-observation.so.0.0-7-g5c10-dirty: src/CMakeFiles/pyrene-state-observation.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX shared library libpyrene-state-observation.so"
 	cd /home/sjeddou/devel/pyrene-state-observation/_build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pyrene-state-observation.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/sjeddou/devel/pyrene-state-observation/_build/src && $(CMAKE_COMMAND) -E cmake_symlink_library libpyrene-state-observation.so.0.0-5-gd8ae-dirty libpyrene-state-observation.so.0.0-5-gd8ae-dirty libpyrene-state-observation.so
+	cd /home/sjeddou/devel/pyrene-state-observation/_build/src && $(CMAKE_COMMAND) -E cmake_symlink_library libpyrene-state-observation.so.0.0-7-g5c10-dirty libpyrene-state-observation.so.0.0-7-g5c10-dirty libpyrene-state-observation.so
 
-src/libpyrene-state-observation.so: src/libpyrene-state-observation.so.0.0-5-gd8ae-dirty
+src/libpyrene-state-observation.so: src/libpyrene-state-observation.so.0.0-7-g5c10-dirty
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/pyrene-state-observation.dir/build: src/libpyrene-state-observation.so
@@ -150,7 +150,7 @@ src/CMakeFiles/pyrene-state-observation.dir/build: src/libpyrene-state-observati
 
 src/CMakeFiles/pyrene-state-observation.dir/requires: src/CMakeFiles/pyrene-state-observation.dir/model-base-ekf-flex-estimator-imu.cpp.o.requires
 src/CMakeFiles/pyrene-state-observation.dir/requires: src/CMakeFiles/pyrene-state-observation.dir/multibody-flexible-dynamical-system.cpp.o.requires
-src/CMakeFiles/pyrene-state-observation.dir/requires: src/CMakeFiles/pyrene-state-observation.dir/definitions.cpp.o.requires
+src/CMakeFiles/pyrene-state-observation.dir/requires: src/CMakeFiles/pyrene-state-observation.dir/multibody-ekf-flexibility-estimator.cpp.o.requires
 .PHONY : src/CMakeFiles/pyrene-state-observation.dir/requires
 
 src/CMakeFiles/pyrene-state-observation.dir/clean:

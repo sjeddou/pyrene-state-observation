@@ -13,5 +13,7 @@
 /home/sjeddou/devel/pyrene-state-observation/_build/CMakeFiles/release.dir
 /home/sjeddou/devel/pyrene-state-observation/_build/unit-testings/CMakeFiles/test-definitions_exe.dir
 /home/sjeddou/devel/pyrene-state-observation/_build/unit-testings/CMakeFiles/test-gaussian-white-noise_exe.dir
+/home/sjeddou/devel/pyrene-state-observation/_build/unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir
+/home/sjeddou/devel/pyrene-state-observation/_build/unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir
 /home/sjeddou/devel/pyrene-state-observation/_build/unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system_exe.dir
 /home/sjeddou/devel/pyrene-state-observation/_build/CMakeFiles/uninstall.dir

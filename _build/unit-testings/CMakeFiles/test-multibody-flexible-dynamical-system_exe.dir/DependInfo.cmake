@@ -25,6 +25,8 @@ SET(CMAKE_C_TARGET_INCLUDE_PATH
   "../include"
   "/usr/include/eigen3"
   "/opt/openrobots/include"
+  "/local/sjeddou/devel/install/include"
+  "/usr/include/assimp"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

@@ -169,30 +169,6 @@ pyrene-state-observation/fast:
 	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f src/CMakeFiles/pyrene-state-observation.dir/build.make src/CMakeFiles/pyrene-state-observation.dir/build
 .PHONY : pyrene-state-observation/fast
 
-definitions.o: definitions.cpp.o
-.PHONY : definitions.o
-
-# target to build an object file
-definitions.cpp.o:
-	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f src/CMakeFiles/pyrene-state-observation.dir/build.make src/CMakeFiles/pyrene-state-observation.dir/definitions.cpp.o
-.PHONY : definitions.cpp.o
-
-definitions.i: definitions.cpp.i
-.PHONY : definitions.i
-
-# target to preprocess a source file
-definitions.cpp.i:
-	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f src/CMakeFiles/pyrene-state-observation.dir/build.make src/CMakeFiles/pyrene-state-observation.dir/definitions.cpp.i
-.PHONY : definitions.cpp.i
-
-definitions.s: definitions.cpp.s
-.PHONY : definitions.s
-
-# target to generate assembly for a file
-definitions.cpp.s:
-	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f src/CMakeFiles/pyrene-state-observation.dir/build.make src/CMakeFiles/pyrene-state-observation.dir/definitions.cpp.s
-.PHONY : definitions.cpp.s
-
 model-base-ekf-flex-estimator-imu.o: model-base-ekf-flex-estimator-imu.cpp.o
 .PHONY : model-base-ekf-flex-estimator-imu.o
 
@@ -216,6 +192,30 @@ model-base-ekf-flex-estimator-imu.s: model-base-ekf-flex-estimator-imu.cpp.s
 model-base-ekf-flex-estimator-imu.cpp.s:
 	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f src/CMakeFiles/pyrene-state-observation.dir/build.make src/CMakeFiles/pyrene-state-observation.dir/model-base-ekf-flex-estimator-imu.cpp.s
 .PHONY : model-base-ekf-flex-estimator-imu.cpp.s
+
+multibody-ekf-flexibility-estimator.o: multibody-ekf-flexibility-estimator.cpp.o
+.PHONY : multibody-ekf-flexibility-estimator.o
+
+# target to build an object file
+multibody-ekf-flexibility-estimator.cpp.o:
+	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f src/CMakeFiles/pyrene-state-observation.dir/build.make src/CMakeFiles/pyrene-state-observation.dir/multibody-ekf-flexibility-estimator.cpp.o
+.PHONY : multibody-ekf-flexibility-estimator.cpp.o
+
+multibody-ekf-flexibility-estimator.i: multibody-ekf-flexibility-estimator.cpp.i
+.PHONY : multibody-ekf-flexibility-estimator.i
+
+# target to preprocess a source file
+multibody-ekf-flexibility-estimator.cpp.i:
+	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f src/CMakeFiles/pyrene-state-observation.dir/build.make src/CMakeFiles/pyrene-state-observation.dir/multibody-ekf-flexibility-estimator.cpp.i
+.PHONY : multibody-ekf-flexibility-estimator.cpp.i
+
+multibody-ekf-flexibility-estimator.s: multibody-ekf-flexibility-estimator.cpp.s
+.PHONY : multibody-ekf-flexibility-estimator.s
+
+# target to generate assembly for a file
+multibody-ekf-flexibility-estimator.cpp.s:
+	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f src/CMakeFiles/pyrene-state-observation.dir/build.make src/CMakeFiles/pyrene-state-observation.dir/multibody-ekf-flexibility-estimator.cpp.s
+.PHONY : multibody-ekf-flexibility-estimator.cpp.s
 
 multibody-flexible-dynamical-system.o: multibody-flexible-dynamical-system.cpp.o
 .PHONY : multibody-flexible-dynamical-system.o
@@ -255,12 +255,12 @@ help:
 	@echo "... pyrene-state-observation"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... definitions.o"
-	@echo "... definitions.i"
-	@echo "... definitions.s"
 	@echo "... model-base-ekf-flex-estimator-imu.o"
 	@echo "... model-base-ekf-flex-estimator-imu.i"
 	@echo "... model-base-ekf-flex-estimator-imu.s"
+	@echo "... multibody-ekf-flexibility-estimator.o"
+	@echo "... multibody-ekf-flexibility-estimator.i"
+	@echo "... multibody-ekf-flexibility-estimator.s"
 	@echo "... multibody-flexible-dynamical-system.o"
 	@echo "... multibody-flexible-dynamical-system.i"
 	@echo "... multibody-flexible-dynamical-system.s"

@@ -364,6 +364,32 @@ test-gaussian-white-noise_exe/fast:
 .PHONY : test-gaussian-white-noise_exe/fast
 
 #=============================================================================
+# Target rules for targets named test-inertia-pinocchio_exe
+
+# Build rule for target.
+test-inertia-pinocchio_exe: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test-inertia-pinocchio_exe
+.PHONY : test-inertia-pinocchio_exe
+
+# fast build rule for target.
+test-inertia-pinocchio_exe/fast:
+	$(MAKE) -f unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/build.make unit-testings/CMakeFiles/test-inertia-pinocchio_exe.dir/build
+.PHONY : test-inertia-pinocchio_exe/fast
+
+#=============================================================================
+# Target rules for targets named test-kalman-filter-base_exe
+
+# Build rule for target.
+test-kalman-filter-base_exe: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test-kalman-filter-base_exe
+.PHONY : test-kalman-filter-base_exe
+
+# fast build rule for target.
+test-kalman-filter-base_exe/fast:
+	$(MAKE) -f unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/build.make unit-testings/CMakeFiles/test-kalman-filter-base_exe.dir/build
+.PHONY : test-kalman-filter-base_exe/fast
+
+#=============================================================================
 # Target rules for targets named test-multibody-flexible-dynamical-system_exe
 
 # Build rule for target.
@@ -405,6 +431,8 @@ help:
 	@echo "... pyrene-state-observation"
 	@echo "... test-definitions_exe"
 	@echo "... test-gaussian-white-noise_exe"
+	@echo "... test-inertia-pinocchio_exe"
+	@echo "... test-kalman-filter-base_exe"
 	@echo "... test-multibody-flexible-dynamical-system_exe"
 .PHONY : help
 
