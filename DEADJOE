@@ -1,0 +1,76 @@
+
+*** These modified files were found in JOE when it aborted on Fri Jun  2 11:01:26 2017
+*** JOE was aborted by UNIX signal 1
+
+*** Fichier '/home/sjeddou/devel/pyrene-state-observation/.git/COMMIT_EDITMSG'
+# Deleting unnecessary files
+# Veuillez saisir le messag[Be de validation pour vos modifications. Les lignes
+# commençant par '#' seront ignorées, et un message vide abandonne la validation.
+# Sur la branche master
+# Modifications qui seront validées :
+#	modifié:         CMakeLists.txt
+#	modifié:         CMakeLists.txt.user
+#	supprimé:        CMakeLists.txt~
+#	supprimé:        _build/src/CMakeFiles/pyrene-state-observation.dir/dynamical-system-functor-base.cpp.o
+#	supprimé:        _build/src/CMakeFiles/pyrene-state-observation.dir/dynamical-system-simulator.cpp.o
+#	supprimé:        _build/src/CMakeFiles/pyrene-state-observation.dir/gaussian-white-noise.cpp.o
+#	supprimé:        _build/src/libpyrene-state-observation.so.
+#	supprimé:        _build/src/libpyrene-state-observation.so.0.0-dirty
+#	supprimé:        _build/src/libpyrene-state-observation.so.UNKNOWN-dirty
+#	supprimé:        _build/unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system.dir/CXX.includecache
+#	supprimé:        _build/unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system.dir/DependInfo.cmake
+#	supprimé:        _build/unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system.dir/build.make
+#	supprimé:        _build/unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system.dir/cmake_clean.cmake
+#	supprimé:        _build/unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system.dir/depend.internal
+#	supprimé:        _build/unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system.dir/depend.make
+#	supprimé:        _build/unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system.dir/flags.make
+#	supprimé:        _build/unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system.dir/link.txt
+#	supprimé:        _build/unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system.dir/progress.make
+#	supprimé:        _build/unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system.dir/test-multibody-flexible-dynamical-system.cpp.o
+#	supprimé:        _build/unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system_exe.dir/test-multibody-flexible-dynamical-system.cpp.o
+#	supprimé:        _build/unit-testings/test-multibody-flexible-dynamical-system
+#	supprimé:        _build/unit-testings/test-multibody-flexible-dynamical-system_exe
+#	supprimé:        include/pyrene-state-observation/flexibility-estimation/multibody-flexible-dynamical-system.hpp
+#	supprimé:        include/pyrene-state-observation/flexibility-estimation/multibody-flexible-dynamical-system.hpp~
+#	supprimé:        include/pyrene-state-observation/pyrene-flexibility-estimation/elastic-frame-dynamical-system.hpp
+#	nouveau fichier: include/pyrene-state-observation/pyrene-flexibility-estimation/model-base-ekf-flex-estimator-imu.hpp
+#	modifié:         include/pyrene-state-observation/pyrene-flexibility-estimation/multibody-flexible-dynamical-system.hpp
+#	supprimé:        include/pyrene-state-observation/pyrene-flexibility-estimation/multibody-flexible-dynamical-system.hpp~
+#	supprimé:        include/state-observation/dynamical-system/dynamical-system-functor-base.hpp
+#	supprimé:        include/state-observation/dynamical-system/dynamical-system-simulator.hpp
+#	supprimé:        include/state-observation/flexibility-estimation/multibody-flexible-dynamical-system.hpp
+#	supprimé:        include/state-observation/flexibility-estimation/multibody-flexible-dynamical-system.hpp~
+#	supprimé:        include/state-observation/noise/gaussian-white-noise.hpp
+#	supprimé:        include/state-observation/noise/noise-base.hpp
+#	supprimé:        include/state-observation/tools/definitions.hpp
+#	supprimé:        include/state-observation/tools/definitions.hxx
+#	supprimé:        include/state-observation/tools/probability-law-simulation.hpp
+#	supprimé:        jrl-cmakemodules
+#	modifié:         src/CMakeLists.txt
+#	supprimé:        src/CMakeLists.txt~
+#	supprimé:        src/dynamical-system-functor-base.cpp
+#	supprimé:        src/dynamical-system-simulator.cpp
+#	supprimé:        src/dynamical-system-simulator.o
+#	supprimé:        src/gaussian-white-noise.cpp
+#	supprimé:        src/gaussian-white-noise.o
+#	nouveau fichier: src/model-base-ekf-flex-estimator-imu.cpp
+#	modifié:         src/multibody-flexible-dynamical-system.cpp
+#	supprimé:        src/multibody-flexible-dynamical-system.cpp~
+#	supprimé:        unit-testings/test-gaussian-white-noise.o
+#	supprimé:        unit-testings/test-multibody-flexible-dynamical-system
+#	supprimé:        unit-testings/test-multibody-flexible-dynamical-system.cpp~
+#	supprimé:        unit-testings/test-multibody-flexible-dynamical-system.o
+#
+
+*** Fichier '(Sans nom)'
+/home/sjeddou/devel/pyrene-state-observation/.git/COMMIT_EDITMSG
+/home/sjeddou/devel/pyrene-state-observation/.git/COMMIT_EDITMSG
+/home/sjeddou/devel/pyrene-state-observation/.git/COMMIT_EDITMSG
+/home/sjeddou/devel/pyrene-state-observation/.git/COMMIT_EDITMSG
+/home/sjeddou/devel/pyrene-state-observation/.git/MERGE_MSG
+/home/sjeddou/devel/pyrene-state-observation/.git/COMMIT_EDITMSG
+/home/sjeddou/devel/robotpkg/wip/.git/COMMIT_EDITMSG
+/home/sjeddou/devel/robotpkg/wip/.git/COMMIT_EDITMSG
+/home/sjeddou/devel/robotpkg/wip/.git/COMMIT_EDITMSG
+/home/sjeddou/devel/robotpkg/wip/.git/COMMIT_EDITMSG
+/home/sjeddou/devel/pyrene-state-observation/.git/COMMIT_EDITMSG
