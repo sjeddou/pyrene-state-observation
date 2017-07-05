@@ -7,13 +7,20 @@
 #include <deque>
 
 #ifdef STATEOBSERVATION_VERBOUS_CONSTRUCTORS
-#   include <iostream>
+#include <iostream>
 #endif
 
 #include <boost/assert.hpp>
 
 #include <Eigen/Core>
 #include <Eigen/Geometry>
+#include <vector>
+#include <deque>
+
+#include <fstream>
+
+
+
 
 namespace pyreneStateObservation
 {
@@ -39,6 +46,12 @@ namespace pyreneStateObservation
         static const unsigned lh = 2;
         static const unsigned rh = 3;
         };
+
+
+
+
+
+
     }
 
 }

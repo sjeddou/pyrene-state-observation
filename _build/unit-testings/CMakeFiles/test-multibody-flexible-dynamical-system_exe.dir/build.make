@@ -93,7 +93,7 @@ unit-testings/test-multibody-flexible-dynamical-system_exe: /usr/lib/x86_64-linu
 unit-testings/test-multibody-flexible-dynamical-system_exe: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
 unit-testings/test-multibody-flexible-dynamical-system_exe: /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so
 unit-testings/test-multibody-flexible-dynamical-system_exe: /usr/lib/x86_64-linux-gnu/libpthread.so
-unit-testings/test-multibody-flexible-dynamical-system_exe: src/libpyrene-state-observation.so.0.0-1-g051d-dirty
+unit-testings/test-multibody-flexible-dynamical-system_exe: src/libpyrene-state-observation.so.0.0-5-gd8ae-dirty
 unit-testings/test-multibody-flexible-dynamical-system_exe: unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system_exe.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable test-multibody-flexible-dynamical-system_exe"
 	cd /home/sjeddou/devel/pyrene-state-observation/_build/unit-testings && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test-multibody-flexible-dynamical-system_exe.dir/link.txt --verbose=$(VERBOSE)

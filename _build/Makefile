@@ -338,6 +338,19 @@ pyrene-state-observation/fast:
 .PHONY : pyrene-state-observation/fast
 
 #=============================================================================
+# Target rules for targets named test-definitions_exe
+
+# Build rule for target.
+test-definitions_exe: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test-definitions_exe
+.PHONY : test-definitions_exe
+
+# fast build rule for target.
+test-definitions_exe/fast:
+	$(MAKE) -f unit-testings/CMakeFiles/test-definitions_exe.dir/build.make unit-testings/CMakeFiles/test-definitions_exe.dir/build
+.PHONY : test-definitions_exe/fast
+
+#=============================================================================
 # Target rules for targets named test-gaussian-white-noise_exe
 
 # Build rule for target.
@@ -390,6 +403,7 @@ help:
 	@echo "... test"
 	@echo "... uninstall"
 	@echo "... pyrene-state-observation"
+	@echo "... test-definitions_exe"
 	@echo "... test-gaussian-white-noise_exe"
 	@echo "... test-multibody-flexible-dynamical-system_exe"
 .PHONY : help

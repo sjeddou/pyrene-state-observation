@@ -156,6 +156,20 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+unit-testings/CMakeFiles/test-definitions_exe.dir/rule:
+	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f CMakeFiles/Makefile2 unit-testings/CMakeFiles/test-definitions_exe.dir/rule
+.PHONY : unit-testings/CMakeFiles/test-definitions_exe.dir/rule
+
+# Convenience name for target.
+test-definitions_exe: unit-testings/CMakeFiles/test-definitions_exe.dir/rule
+.PHONY : test-definitions_exe
+
+# fast build rule for target.
+test-definitions_exe/fast:
+	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f unit-testings/CMakeFiles/test-definitions_exe.dir/build.make unit-testings/CMakeFiles/test-definitions_exe.dir/build
+.PHONY : test-definitions_exe/fast
+
+# Convenience name for target.
 unit-testings/CMakeFiles/test-gaussian-white-noise_exe.dir/rule:
 	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f CMakeFiles/Makefile2 unit-testings/CMakeFiles/test-gaussian-white-noise_exe.dir/rule
 .PHONY : unit-testings/CMakeFiles/test-gaussian-white-noise_exe.dir/rule
@@ -182,6 +196,30 @@ test-multibody-flexible-dynamical-system_exe: unit-testings/CMakeFiles/test-mult
 test-multibody-flexible-dynamical-system_exe/fast:
 	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system_exe.dir/build.make unit-testings/CMakeFiles/test-multibody-flexible-dynamical-system_exe.dir/build
 .PHONY : test-multibody-flexible-dynamical-system_exe/fast
+
+test-definitions.o: test-definitions.cpp.o
+.PHONY : test-definitions.o
+
+# target to build an object file
+test-definitions.cpp.o:
+	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f unit-testings/CMakeFiles/test-definitions_exe.dir/build.make unit-testings/CMakeFiles/test-definitions_exe.dir/test-definitions.cpp.o
+.PHONY : test-definitions.cpp.o
+
+test-definitions.i: test-definitions.cpp.i
+.PHONY : test-definitions.i
+
+# target to preprocess a source file
+test-definitions.cpp.i:
+	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f unit-testings/CMakeFiles/test-definitions_exe.dir/build.make unit-testings/CMakeFiles/test-definitions_exe.dir/test-definitions.cpp.i
+.PHONY : test-definitions.cpp.i
+
+test-definitions.s: test-definitions.cpp.s
+.PHONY : test-definitions.s
+
+# target to generate assembly for a file
+test-definitions.cpp.s:
+	cd /home/sjeddou/devel/pyrene-state-observation/_build && $(MAKE) -f unit-testings/CMakeFiles/test-definitions_exe.dir/build.make unit-testings/CMakeFiles/test-definitions_exe.dir/test-definitions.cpp.s
+.PHONY : test-definitions.cpp.s
 
 test-gaussian-white-noise.o: test-gaussian-white-noise.cpp.o
 .PHONY : test-gaussian-white-noise.o
@@ -244,8 +282,12 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... test-definitions_exe"
 	@echo "... test-gaussian-white-noise_exe"
 	@echo "... test-multibody-flexible-dynamical-system_exe"
+	@echo "... test-definitions.o"
+	@echo "... test-definitions.i"
+	@echo "... test-definitions.s"
 	@echo "... test-gaussian-white-noise.o"
 	@echo "... test-gaussian-white-noise.i"
 	@echo "... test-gaussian-white-noise.s"

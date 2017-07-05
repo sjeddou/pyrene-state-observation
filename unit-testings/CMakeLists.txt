@@ -23,6 +23,9 @@ include_directories(${Boost_INCLUDE_DIR} ${PROJECT_INCLUDE_DIR})
 SET(tests
     test-multibody-flexible-dynamical-system
     test-gaussian-white-noise
+    test-definitions
+    test-kalman-filter-base
+    test-inertia-pinocchio
   )
 
 FOREACH(test ${tests})

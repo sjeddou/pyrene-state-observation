@@ -9,6 +9,7 @@
 #include <state-observation/dynamical-system/algorithm/rigid-body-kinematics.hpp>
 using namespace std;
 using namespace Eigen;
+using namespace stateObservation;
 
 namespace pyreneStateObservation
 {
@@ -40,12 +41,14 @@ namespace pyreneStateObservation
       struct state
             {
           ///indexes of different components of a state vector
-              static const unsigned jointConf = 0;
-              static const unsigned jointVel = 6;
-              static const unsigned flexConf = 12;
-              static const unsigned flexVel = 18;
-              static const unsigned jointTorque =24;
-              static const unsigned contactForces =30;
+              static const unsigned jointConf = 0; //joint configuration (angle) before flexibility
+              static const unsigned jointVel = 1;  //derivative of joint configuration before flexibility
+              static const unsigned linFlexConf = 4; //linear component of flexibility configuration
+              static const unsigned angFlexConf = 5; //angular component of flexibility configuration
+              static const unsigned linFlexVel = 6;
+              static const unsigned angFlexVel = 7;
+              static const unsigned jointTorque = 12; 
+              static const unsigned contactForces =15;
 
             };
       struct contactModel
@@ -73,10 +76,31 @@ namespace pyreneStateObservation
 
 
 
+      ///The dynamics of actuators
+
+
+      virtual Vector actuatorDynamics(const Vector& x, const Vector& u, unsigned k);
+         
+
+
+
+
+
+
       /// Description of the state dynamics
-      //virtual std::vector<long> stateDynamics(const stateObservation::vector& x, const stateObservation::vector& u,unsigned k);
-      //virtual VectorXd stateDynamics(const pyreneStateObservation::VectorXd& x, const pyreneStateObservation::VectorXd& u,unsigned k);
-      virtual stateObservation::Vector stateDynamics(const VectorXd& x, const VectorXd& u,unsigned k);
+
+      /* virtual Vector stateDynamics(const VectorXd& x, const VectorXd& u,unsigned k);*/
+
+
+
+
+
+
+
+
+
+      /// Description of measurment
+
 
     private:
 
@@ -87,52 +111,57 @@ namespace pyreneStateObservation
       double dt_;
       unsigned contactModel_;
       static const unsigned stateSize_=26;
-      Matrix3d Kpj_, Kdj_;
+      Matrix3  Kpj_, Kdj_;
       unsigned nbContacts_;
-      Matrix3d& computeRotation_(const Vector3d & x, int i);
+      Matrix3& computeRotation_(const Vector3 &x, int i);
 
       VectorXd xk_;
       VectorXd uk_;
+      Vector xk1_;
       struct Optimization
 
-      {     ///StateDyanmics
+      {
+          ///Actuator Dynamics
 
-                  Vector3d positionFlex;
-                  Vector3d orientationFlex;
-                  Vector3d velocityFlex;
-                  Vector3d angularVelocityFlex;
-                  stateObservation::IndexedMatrixArray efforts;
-                  stateObservation::IndexedMatrixArray contactPosV;
-                  stateObservation::IndexedMatrixArray contactOriV;
-                  stateObservation::IndexedMatrixArray contactVelArray;
-                  stateObservation::IndexedMatrixArray contactAngVelArray;
+          Vector3 flexDynamics;
+         
+
+
+
+          ///State Vector
+          Vector positionJoint;
+          Vector positionJointDot;
+		  Vector3 confFlex;
+		  Vector3 confVelFlex;
+		  Vector3 f;
+                  Vector3 t;
 
 
 
             ///ComputeRotation
 
-                  Matrix3d curRotation0;
-                  Vector3d orientationVector0;
-                  Matrix3d curRotation1;
-                  Vector3d orientationVector1;
-                  Matrix3d curRotation2;
-                  Vector3d orientationVector2;
-                  Matrix3d curRotation3;
-                  Vector3d orientationVector3;
+                  Matrix3 curRotation0;
+                  Vector3 orientationVector0;
+                  Matrix3 curRotation1;
+                  Vector3 orientationVector1;
+                  Matrix3 curRotation2;
+                  Vector3 orientationVector2;
+                  Matrix3 curRotation3;
+                  Vector3 orientationVector3;
 
                   Optimization()
                     :
-                    curRotation0(Matrix3d::Identity()),
-                    orientationVector0(Vector3d::Zero()),
-                    curRotation1(Matrix3d::Identity()),
-                    orientationVector1(Vector3d::Zero()),
-                    curRotation2(Matrix3d::Identity()),
-                    orientationVector2(Vector3d::Zero()),
-                    curRotation3(Matrix3d::Identity()),
-                    orientationVector3(Vector3d::Zero())
+                    curRotation0(Matrix3::Identity()),
+                    orientationVector0(Vector3::Zero()),
+                    curRotation1(Matrix3::Identity()),
+                    orientationVector1(Vector3::Zero()),
+                    curRotation2(Matrix3::Identity()),
+                    orientationVector2(Vector3::Zero()),
+                    curRotation3(Matrix3::Identity()),
+                    orientationVector3(Vector3::Zero())
                   {}
 
-                  inline Vector3d& orientationVector(int i)
+                  inline Vector3& orientationVector(int i)
                   {
                     if (i==0)
                       return orientationVector0;
@@ -164,6 +193,7 @@ namespace pyreneStateObservation
   };
 
     }
+
 }
 
 #endif // MULTIBODYFLEXIBLEDYNAMICALSYSTEM_HPP_
