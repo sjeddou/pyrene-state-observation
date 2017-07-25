@@ -305,7 +305,7 @@ TAR:FILEPATH=/bin/tar
 pyrene-state-observation_BINARY_DIR:STATIC=/home/sjeddou/devel/pyrene-state-observation/_build
 
 //Dependencies for the target
-pyrene-state-observation_LIB_DEPENDS:STATIC=general;state-observation;general;-L/opt/openrobots/lib;general;-lstate-observation;
+pyrene-state-observation_LIB_DEPENDS:STATIC=general;state-observation;general;pinocchio;general;-L/opt/openrobots/lib;general;-lstate-observation;general;-Wl,-rpath,/opt/openrobots/lib;general;-Wl,-rpath,/usr/lib/x86_64-linux-gnu;general;-L/opt/openrobots/lib;general;-lpinocchio;general;-lurdfdom_sensor;general;-lurdfdom_model_state;general;-lurdfdom_model;general;-lurdfdom_world;general;-lhpp-fcl;general;-lboost_thread;general;-lboost_date_time;general;-lboost_filesystem;general;-lboost_system;general;-lconsole_bridge;general;-lccd;general;-loctomap;general;-loctomath;general;-lassimp;general;-Wl,-rpath,/opt/openrobots/lib;general;-Wl,-rpath,/usr/lib/x86_64-linux-gnu;
 
 //Value Computed by CMake
 pyrene-state-observation_SOURCE_DIR:STATIC=/home/sjeddou/devel/pyrene-state-observation
@@ -670,7 +670,7 @@ _PKG_CONFIG_REQUIRES:INTERNAL=
 _PKG_CONFIG_REQUIRES_DEBUG:INTERNAL=
 _PKG_CONFIG_REQUIRES_OPTIMIZED:INTERNAL=
 _PKG_CONFIG_URL:INTERNAL=
-_PKG_CONFIG_VERSION:INTERNAL=0.0-7-g5c10-dirty
+_PKG_CONFIG_VERSION:INTERNAL=0.0-9-g10a0-dirty
 __pkg_config_checked_PINOCCHIO:INTERNAL=1
 __pkg_config_checked_STATE_OBSERVATION:INTERNAL=1
 __pkg_config_checked__Eigen:INTERNAL=1

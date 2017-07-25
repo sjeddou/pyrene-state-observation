@@ -4,7 +4,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/pyrene-state-observation.dir/multibody-ekf-flexibility-estimator.cpp.o"
   "libpyrene-state-observation.pdb"
   "libpyrene-state-observation.so"
-  "libpyrene-state-observation.so.0.0-7-g5c10-dirty"
+  "libpyrene-state-observation.so.0.0-9-g10a0-dirty"
 )
 
 # Per-language clean rules from dependency scanning.

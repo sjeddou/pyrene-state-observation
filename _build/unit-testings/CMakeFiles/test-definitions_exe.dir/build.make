@@ -93,7 +93,7 @@ unit-testings/test-definitions_exe: /usr/lib/x86_64-linux-gnu/libboost_thread.so
 unit-testings/test-definitions_exe: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
 unit-testings/test-definitions_exe: /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so
 unit-testings/test-definitions_exe: /usr/lib/x86_64-linux-gnu/libpthread.so
-unit-testings/test-definitions_exe: src/libpyrene-state-observation.so.0.0-7-g5c10-dirty
+unit-testings/test-definitions_exe: src/libpyrene-state-observation.so.0.0-9-g10a0-dirty
 unit-testings/test-definitions_exe: unit-testings/CMakeFiles/test-definitions_exe.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable test-definitions_exe"
 	cd /home/sjeddou/devel/pyrene-state-observation/_build/unit-testings && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test-definitions_exe.dir/link.txt --verbose=$(VERBOSE)

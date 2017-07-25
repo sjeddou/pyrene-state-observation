@@ -14,10 +14,11 @@ namespace pyreneFlexibilityEstimation
 
 /// Create an alias for State
 typedef MultibodyFlexibleDynamicalSystem::state state;
+
 ///Constructor
 MultibodyEKFFlexibilityEstimator::MultibodyEKFFlexibilityEstimator(double dt)
 {
-    cout <<"Strating" <<endl;
+    cout <<"Starting" <<endl;
 }
 ///Destructor
 MultibodyEKFFlexibilityEstimator::~MultibodyEKFFlexibilityEstimator()
@@ -25,7 +26,11 @@ MultibodyEKFFlexibilityEstimator::~MultibodyEKFFlexibilityEstimator()
 
 }
 
+const Vector& MultibodyEKFFlexibilityEstimator::getFlexibilityVector()
+{
 
+
+}
 
 
 

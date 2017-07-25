@@ -23,8 +23,10 @@ public:
     /// Virtual destructor
     virtual ~MultibodyEKFFlexibilityEstimator();
 
-    /// Gets an estimation of the flexibility in the form of a homogeneous matrix
-    virtual Matrix4 getFlexibility();
+
+    /// Gets an estimation of the flexibility in the form of a state vector hat{x_(k+1)}
+    virtual const Vector& getFlexibilityVector();
+
 
 
 

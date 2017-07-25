@@ -54,7 +54,7 @@ include CMakeFiles/distorig.dir/progress.make
 CMakeFiles/distorig:
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/sjeddou/devel/pyrene-state-observation/_build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating orig tarball..."
-	cmake -E copy pyrene-state-observation-0.0-7-g5c10-dirty.tar.gz pyrene-state-observation-0.0-7-g5c10-dirty.orig.tar.gz
+	cmake -E copy pyrene-state-observation-0.0-9-g10a0-dirty.tar.gz pyrene-state-observation-0.0-9-g10a0-dirty.orig.tar.gz
 
 distorig: CMakeFiles/distorig
 distorig: CMakeFiles/distorig.dir/build.make

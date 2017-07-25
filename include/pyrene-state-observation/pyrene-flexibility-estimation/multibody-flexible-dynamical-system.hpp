@@ -123,14 +123,14 @@ namespace pyreneStateObservation
       {
           ///Actuator Dynamics
 
-          Vector3 flexDynamics;
-         
+          VectorXd qfddot ;
+          VectorXd qfddot_init;
 
 
 
           ///State Vector
-          Vector positionJoint;
-          Vector positionJointDot;
+          	  Vector positionJoint;
+          	  Vector positionJointDot;
 		  Vector3 confFlex;
 		  Vector3 confVelFlex;
 		  Vector3 f;

@@ -1,11 +1,20 @@
 #include <iostream>
+#include <Eigen/Cholesky>
 #include <vector>
-#include <pyrene-state-observation/pyrene-flexibility-estimation/multibody-flexible-dynamical-system.hpp>
 
+
+#include <pinocchio/multibody/model.hpp>
+#include <pinocchio/algorithm/crba.hpp>
+#include <pinocchio/parsers/urdf.hpp>
+#include "pinocchio/algorithm/rnea.hpp"
+
+#include <pyrene-state-observation/pyrene-flexibility-estimation/multibody-flexible-dynamical-system.hpp>
 #include <stdexcept>
 
-using namespace std;
+
+
 using namespace Eigen;
+
 using namespace stateObservation;
 namespace pyreneStateObservation
 {
@@ -14,7 +23,6 @@ namespace pyreneFlexibilityEstimation
 
 
 
-///Actuator's Dynamics
 
 
 
@@ -31,7 +39,7 @@ namespace pyreneFlexibilityEstimation
    }
    void MultibodyFlexibleDynamicalSystem::Start()
    {
-   cout <<"Starting" <<endl;
+   std::cout <<"Starting" <<std::endl;
    }
    void MultibodyFlexibleDynamicalSystem::setRobotMass(double m)
    {
@@ -74,33 +82,64 @@ namespace pyreneFlexibilityEstimation
 
 
     Vector MultibodyFlexibleDynamicalSystem::actuatorDynamics(const Vector& x, const Vector& u, unsigned k)
-   {   assertStateVector_(x);
-       assertInputVector_(u);
+   {
+        assertStateVector_(x);
+        assertInputVector_(u);
         xk_=x;
         uk_=u;
 
 
-       ///Getting flexibility estimation
 
-       
-        /// op_.f : model of the initial state
-       
-        op_.flexDynamics.segment<3>(0)=op_.f+pyrene::m*Vector3(9.8,0,0)-stateObservation::Matrix::Identity(3,3)*stateObservation::Matrix::Identity(3,3);
+        ///Getting Inertia Matrix with data.M : computed with Composite Rigid Body Algorithm (CRBA)
 
-        xk1_=x;
+        /// Inverse of Matrix M : data.M.inverse()
+        const std::string filename = "/opt/openrobots/share/talos_data/robots/talos_reduced.urdf";
+        se3::Model model;
+        se3::urdf::buildModel(filename, model);
+        se3::Data data(model);
+        data.M.fill(0);
+        Eigen::VectorXd q = Eigen::VectorXd::Zero(model.nq);
+        se3::crba(model,data,q);
+        Eigen::MatrixXd M(model.nv,model.nv);
 
-        ///Description of state vector
+        ///Getting Non linear interia matrix
+        se3::Data data_rnea(model);
+    	data_rnea.v[0]= se3::Motion::Zero();
+    	data_rnea.a[0]= - model.gravity;
 
-        xk1_.segment<1>(state::jointConf)=op_.positionJoint;
-        xk1_.segment<1>(state::jointVel)=op_.positionJointDot;
+        Eigen::VectorXd v = Eigen::VectorXd::Zero(model.nv);
+    	Eigen::VectorXd a = Eigen::VectorXd::Zero(model.nv);
+        Eigen::VectorXd tau_rnea=Eigen::VectorXd::Zero(model.nv);
+
+        tau_rnea=se3::rnea(model,data_rnea,q,v,a);
+
+        ///Initializing estimation
+ 
+        op_.qfddot_init=VectorXd::Zero(model.nq);
 
 
-        xk1_.segment<1>(state::linFlexConf)=op_.confFlex.segment<1>(0);
-        xk1_.segment<2>(state::angFlexConf)=op_.confFlex.segment<2>(1);
-        xk1_.segment<1>(state::linFlexVel)=op_.confVelFlex.segment<1>(0);
-        xk1_.segment<2>(state::angFlexVel)=op_.confVelFlex.segment<2>(1);
-        xk1_.segment<3>(state::jointTorque)=op_.t;
-        xk1_.segment<3>(state::contactForces)=op_.f;
+        //qfddot = - q0ddot-(guz 0 0)- inv(Inertia)*B (
+        op_.qfddot=op_.qfddot_init+pyrene::m*Vector3(9.8,0,0)-data.M;
+
+
+
+
+       xk1_=x;
+
+       ///Description of state vector
+
+       xk1_.segment<1>(state::jointConf)=op_.positionJoint;
+       xk1_.segment<1>(state::jointVel)=op_.positionJointDot;
+
+
+       xk1_.segment<1>(state::linFlexConf)=op_.confFlex.segment<1>(0);
+       xk1_.segment<2>(state::angFlexConf)=op_.confFlex.segment<2>(1);
+       xk1_.segment<1>(state::linFlexVel)=op_.confVelFlex.segment<1>(0);
+       xk1_.segment<2>(state::angFlexVel)=op_.confVelFlex.segment<2>(1);
+       xk1_.segment<3>(state::jointTorque)=op_.t;
+       xk1_.segment<3>(state::contactForces)=op_.f;
+
+
 
 
 
