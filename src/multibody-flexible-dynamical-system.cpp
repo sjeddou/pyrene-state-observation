@@ -1,7 +1,7 @@
 #include <iostream>
 #include <Eigen/Cholesky>
 #include <vector>
-
+#include <unsupported/Eigen/MatrixFunctions>
 
 #include <pinocchio/multibody/model.hpp>
 #include <pinocchio/algorithm/crba.hpp>
@@ -153,39 +153,58 @@ namespace pyreneFlexibilityEstimation
 /*
 //Implement state dynamic equations
 
- /// State dynamics & computeRotation & IterateDynamicsEuler
-   VectorXd MultibodyFlexibleDynamicalSystem::stateDynamics(const VectorXd& x, const VectorXd& u, unsigned k)
+   Vector MultibodyFlexibleDynamicalSystem::stateDynamics(const Vector& x,const Vector& u, const Vector& omega, int q_0j_size, int q_ft_size, float T, int num_iter)
         {
             assertStateVector_(x);
             assertInputVector_(u);
 
             xk_=x;
             uk_=u;
-            //Getting flexibility
-            op_.positionFlex=x.segment(state::flexConf,12);
-            op_.orientationFlex=x.segment(state::flexConf,15);
-            op_.velocityFlex=x.segment(state::flexVel,18);
-            op_.angularVelocityFlex=x.segment(state::flexVel,21);
 
-                
-            for (int i=0; i<pyrene::contact::nbModeledMax; ++i)
-                        op_.efforts.setValue(x.segment(state::contactForces+6*i,6),i);
 
-            unsigned nbContacts(getContactsNumber());
+            Vector q_0j(q_0j_size), q_0j_first(q_0j_size), q_0j_second(q_0j_size);
+            Vector q_ft(q_ft_size), q_ft_first(q_ft_size), q_ft_second(q_ft_size);
+            Vector q_fr(3), q_fr_first(3), q_fr_second(3);
 
-            for (unsigned i = 0; i<nbContacts ; ++i)
-            {
-             // Positions
-             op_.contactPosV.setValue(u.segment<3>(input::contacts + 12*i),i);
-             op_.contactOriV.setValue(u.segment<3>(input::contacts +12*i+3),i);
+                assert(q_ft_size < 29);
+                int q_fj_size;
+                q_fj_size = 29 - q_ft_size;
+                assert(omega.size() == 3);
+                MatrixXd A_exp(3,3), B_exp(3,3);
+                A_exp(0,1) = -omega(2);
+                A_exp(0,2) = omega(1);
+                A_exp(1,2) = -omega(0);
+                A_exp -= A_exp.transpose().eval();
+                A_exp = A_exp.exp().eval();
+                MatrixXd omega_T(1,3);
+                omega_T(0,0) = omega(0);
+                omega_T(0,1) = omega(1);
+                omega_T(0,2) = omega(2);
+                for(int i=0; i<num_iter; i++){
+                    q_0j = x.segment(0, q_0j_size);
+                    q_0j_first = x.segment(q_0j_size, q_0j_size);
+                    q_0j_second.segment(0,q_0j_size-1) = q_0j.segment(1,q_0j_size-1).eval()-q_0j.segment(0,q_0j_size-1).eval();
+                    q_0j_second.segment(0,q_0j_size-1) = q_0j_second.segment(1,q_0j_size-1).eval()-q_0j_second.segment(0,q_0j_size-1).eval();
 
-             // Velocities
-             op_.contactVelArray.setValue(u.segment<3>(input::contacts + 12*i +6),i);
-             op_.contactAngVelArray.setValue(u.segment<3>(input::contacts +12*i +9),i);
+                    q_ft = x.segment(2*q_0j_size, q_ft_size);
+                    q_ft_first.segment(0,q_ft_size-1) = q_ft.segment(1,q_ft_size-1).eval()-q_ft.segment(0,q_ft_size-1).eval();
+                    q_ft_second.segment(0,q_ft_size-1) = q_ft_first.segment(1,q_ft_size-1).eval()-q_ft_first.segment(0,q_ft_size-1).eval();
 
-             //
-             
-            }
+                    q_fr = x.segment(2*q_0j_size+q_ft_size, 3);
+                    q_fr_first.segment(0,2) = q_fr.segment(1,2).eval()-q_fr.segment(0,2).eval();
+                    B_exp(0,1) = -q_fr_first(2);
+                    B_exp(0,2) = q_fr_first(1);
+                    B_exp(1,2) = -q_fr_first(0);
+                    B_exp -= B_exp.transpose().eval();
+                    B_exp = B_exp.exp().eval();
+
+                    x.segment(0,q_0j_size) = q_0j+T*q_0j_first+0.5*T*T*q_0j_second;
+                    x.segment(q_0j_size,q_0j_size) = q_0j_first+T*q_0j_second;
+                    x.segment(2*q_0j_size,q_ft_size) = q_ft+T*q_ft_first+0.5*T*T*q_ft_second;
+                    x.segment(2*q_0j_size+q_ft_size, 3) = (omega_T*B_exp*A_exp).eval().row(0);
+                }
+                return x;
+
 
          }
 */

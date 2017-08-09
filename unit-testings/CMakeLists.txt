@@ -26,6 +26,7 @@ SET(tests
     test-definitions
     test-kalman-filter-base
     test-inertia-pinocchio
+    test-state-dynamics
   )
 
 FOREACH(test ${tests})
